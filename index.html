@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram-like Camera Filters</title>
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <h1>Camera Filters</h1>
+      </header>
+      
+      <main>
+        <div class="camera-container">
+          <video id="camera" autoplay playsinline></video>
+          <canvas id="canvas"></canvas>
+        </div>
+        
+        <div class="filters-container">
+          <button class="filter-btn active" data-filter="normal">Normal</button>
+          <button class="filter-btn" data-filter="grayscale">Grayscale</button>
+          <button class="filter-btn" data-filter="sepia">Sepia</button>
+          <button class="filter-btn" data-filter="vintage">Vintage</button>
+          <button class="filter-btn" data-filter="brightness">Bright</button>
+          <button class="filter-btn" data-filter="contrast">Contrast</button>
+          <button class="filter-btn" data-filter="saturation">Saturate</button>
+          <button class="filter-btn" data-filter="blur">Blur</button>
+          <button class="filter-btn" data-filter="pixelate">Pixelate</button>
+          <button class="filter-btn" data-filter="halftone">Halftone</button>
+        </div>
+        
+        <div class="filter-controls">
+          <div id="pixelate-control" class="control-group" style="display: none;">
+            <label for="pixel-size">Pixel Size:</label>
+            <input type="range" id="pixel-size" min="1" max="50" value="10" class="slider">
+            <span id="pixel-size-value">10</span>
+          </div>
+          <div id="halftone-control" class="control-group" style="display: none;">
+            <label for="cell-size">Cell Size:</label>
+            <input type="range" id="cell-size" min="5" max="30" value="10" class="slider">
+            <span id="cell-size-value">10</span>
+          </div>
+        </div>
+      </main>
+      
+      <footer>
+        <p>Meefa App</p>
+      </footer>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
